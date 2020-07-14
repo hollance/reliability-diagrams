@@ -8,7 +8,7 @@ When a model is calibrated, the confidence score should equal the accuracy. For 
 
 One way to find out how well your model is calibrated, is to draw a **reliability diagram**. Here is the reliability diagram for the model **gluon_senet154**, from [pytorch-image-models](https://github.com/rwightman/pytorch-image-models), trained on ImageNet:
 
-![](figures/gluon_senet154_ImageNet_pytorch-image-models.pdf)
+![](figures/gluon_senet154_ImageNet_pytorch-image-models.png)
 
 These results were computed over the ImageNet validation set of 50,000 images.
 
