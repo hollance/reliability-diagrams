@@ -62,8 +62,6 @@ So, which is worse: a model that is too confident, or a model that is not confid
 
 Which is worse depends on the use case, I guess. But if you want to be able to properly interpret the predictions as probabilities -- for example, because you want to feed the output from the neural network into another probabilistic model -- then you don't want the gaps in the reliability diagram to be too large. Remember that calibrating doesn't change the accuracy, it just shifts the confidences around so that 0.9 really means you get 90% correct.
 
-Note: The models in the Guo paper were trained on CIFAR-100, while the models I tested were trained on ImageNet (without calibration). Perhaps the difference is caused by CIFAR vs ImageNet? I plan to run more tests with trained models from other sources and on other datasets. 
-
 ## OK, so my model is not calibrated, how do I fix it?
 
 See the Guo paper for techniques. There have also been follow-up papers with new techniques.
@@ -89,8 +87,11 @@ To generate a reliability diagram for your own model, run it on your test set an
 Currently included are results for models from:
 
 - [rwightman/pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
+- [torchvision](https://pytorch.org/docs/stable/torchvision/models.html)
 - [markus93/NN_calibration](https://github.com/markus93/NN_calibration) -- I also used ideas from their source code
 - "snacks", the model trained in my book [Machine Learning by Tutorials](https://store.raywenderlich.com/products/machine-learning-by-tutorials)
+
+Interestingly, the models from pytorch-image-models tend to under-estimate the confidence, while similar models from torchvision are overconfident (both are trained on ImageNet).
 
 The [figures](figures/) folder contains some PNG images of these reliability diagrams.
 
