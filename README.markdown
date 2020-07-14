@@ -90,8 +90,8 @@ Currently included are results for models from:
 
 - [rwightman/pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
 - [markus93/NN_calibration](https://github.com/markus93/NN_calibration) -- I also used ideas from their source code
+- "snacks", the model trained in my book [Machine Learning by Tutorials](https://store.raywenderlich.com/products/machine-learning-by-tutorials)
 
 The [figures](figures/) folder contains some PNG images of these reliability diagrams.
 
 License: MIT
-
