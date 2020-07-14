@@ -84,11 +84,14 @@ true_label, pred_label, confidence
 
 For a multi-class model, the predicted label and the confidence are for the highest-scoring class.
 
-Currently included are the results for models from:
-
-- [pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
-
 To generate a reliability diagram for your own model, run it on your test set and output a CSV file in this format.
+
+Currently included are results for models from:
+
+- [rwightman/pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
+- [markus93/NN_calibration](https://github.com/markus93/NN_calibration) -- I also used ideas from their source code
+
+The [figures](figures/) folder contains some PNG images of these reliability diagrams.
 
 License: MIT
 
